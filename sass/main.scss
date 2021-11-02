@@ -1,5 +1,8 @@
 @import './utils/variables';
+@import './utils/mixins';
 @import './utils/reset';
 @import './utils/breakpoints';
 @import './utils/vh';
 @import './base/common';
+@import './components/header';
+@import './components/hero';

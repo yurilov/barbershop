@@ -33,8 +33,108 @@ ul {
 }
 
 body {
-  background-color: #ffffff;
-  color: #757575;
-  font-family: "Roboto", sans-serif;
-  letter-spacing: 0.03em;
+  background-color: #e5e5e5;
+  color: #555555;
+  font-family: "Open Sans", sans-serif;
+  letter-spacing: 0.02em;
+}
+
+.container {
+  padding-left: 31px;
+  padding-right: 31px;
+  margin: 0 auto;
+}
+@media screen and (max-width: 767px) {
+  .container {
+    max-width: 480px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .container {
+    width: 768px;
+    padding-left: 39px;
+    padding-right: 39px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .container {
+    width: 1280px;
+    padding-left: 59px;
+    padding-right: 59px;
+  }
+}
+
+.section {
+  padding-top: 84px;
+  padding-bottom: 84px;
+}
+@media screen and (min-width: 768px) {
+  .section {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .section {
+    padding-top: 130px;
+    padding-bottom: 130px;
+  }
+}
+
+.header {
+  position: absolute;
+  width: 100%;
+  padding-top: 40px;
+}
+.header .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.logo {
+  fill: #303030;
+}
+
+@media screen and (max-width: 767px) {
+  .nav {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .header__contact {
+    display: none;
+  }
+}
+
+.menu {
+  border: none;
+  background-color: transparent;
+}
+.menu__icon {
+  fill: #ffffff;
+}
+@media screen and (min-width: 768px) {
+  .menu {
+    display: none;
+  }
+}
+
+.hero {
+  height: 580px;
+  background-image: url(../images/hero-mobile.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
 }/*# sourceMappingURL=main.css.map */

@@ -16,48 +16,59 @@
 </head>
 <body>
     <header class="header">
-        <a href="./index.html" class="logo link">
-            <svg width="66" height="55">
-                <use></use>
-            </svg>
-        </a>
-        <nav class="nav">
-            <ul class="nav__list list">
-                <li class="nav__item">
-                    <a href="#about" class="nav__link link">О нас</a>
-                </li>
-                <li class="nav__item">
-                    <a href="#prices" class="nav__link link">Услуги и цены</a>
-                </li>
-                <li class="nav__item">
-                    <a href="#masters" class="nav__link link">Мастера</a>
-                </li>
-                <li class="nav__item">
-                    <a href="#contacts" class="nav__link link">Контакты</a>
-                </li>
-            </ul>
-        </nav>
-
-        <a href="tel:+380441111111" class="header__link link">+38 044 111 11 11</a>
-        <button type="button" class="header__btn btn">онлайн-запись</button>
+        <div class="container">
+            <a href="./index.html" class="link">
+                <svg width="66" height="55" class="logo">
+                    <use href="./images/sprite.svg#icon-logo"></use>
+                </svg>
+            </a>
+            <nav class="nav">
+                <ul class="nav__list list">
+                    <li class="nav__item">
+                        <a href="#about" class="nav__link link">О нас</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#prices" class="nav__link link">Услуги и цены</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#masters" class="nav__link link">Мастера</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#contacts" class="nav__link link">Контакты</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="header__contact">
+                <a href="tel:+380441111111" class="header__link link">+38 044 111 11 11</a>
+                <a href="#form" class="header__btn link">онлайн-запись</a>
+            </div>
+            <button type="button" class="menu">
+                <svg width="40" height="40" class="menu__icon">
+                    <use href="./images/sprite.svg#icon-menu"></use>
+                </svg>
+            </button>
+        </div>
     </header>
 
     <main>
         <section class="section hero">
-            <p class="section__pretittle hero__pretittle" lang="en">A hair salon for men in Kyiv</p>
-            <h1 class="hero__tittle">BarberShop</h1>
-            <p class="section__after-tittle hero__after-tittle">Мы эксперты в модных мужских стрижках.</p>
-            <ul class="hero__list list">
-                <li class="hero__item">
-                    <a href="" class="hero__social link">Instagram</a>
-                </li>
-                <li class="hero__item">
-                    <a href="" class="hero__social link">Youtube</a>
-                </li>
-            </ul>
+            <div class="container">
+                <p class="section__pretittle hero__pretittle" lang="en">A hair salon for men in Kyiv</p>
+                <h1 class="hero__tittle">BarberShop</h1>
+                <p class="section__after-tittle hero__after-tittle">Мы эксперты в модных мужских стрижках.</p>
+                <ul class="hero__list list">
+                    <li class="hero__item">
+                        <a href="" class="hero__social link">Instagram</a>
+                    </li>
+                    <li class="hero__item">
+                        <a href="" class="hero__social link">Youtube</a>
+                    </li>
+                </ul>
+            </div>
         </section>
 
         <section id="about" class="section about">
+            <div class="container">
             <ul class="about__list list">
                 <li class="about__item">
                     <picture>
@@ -78,10 +89,13 @@
             и жаждет перемен. И когда ты попадешь в руки нашего мастера,
             то уже никогда не сможешь быть прежним. Мы команда, которая всегда с клиентами "на одной волне". Поэтому, мы всегда
             готовы усовершенствовать каждого, кто к нам приходит!</p>
-            <button type="button" class="about__btn btn">онлайн-запись</button>
+            <a href="#form" class="about__btn link">онлайн-запись</a>
+            </div>
+            
         </section>
 
         <section id="prices"class="section prices">
+            <div class="container">
             <p class="section__pretittle prices__pretittle">проведи время в компании лучших мастеров</p>
             <h2 class="section__tittle prices__tittle">Услуги и цены</h2>
             <ul class="prices__left-list">
@@ -99,9 +113,11 @@
             </ul>
             
             <button type="button" class="prices__btn btn">онлайн-запись</button>
+            </div>
         </section>
 
         <section class="section advantages">
+            <div class="container">
             <ul class="advantages__list list">
                 <li class="advantages__item">
                     <span class="advantages__number">600</span>
@@ -123,9 +139,11 @@
             <p class="section__pretittle advantages__pretittle">старая традиционная школа</p>
             <h2 class="section__tittle advantages__tittle">Почему приходят именно к нам?</h2>
             <p class="section__after-tittle advantages__after-tittle">О нас говорят только хорошее. Но лучше 1 раз увидеть и прочувствовать, чем 10 раз прочитать.</p>
+            </div>
         </section>
 
         <section class="section masters">
+            <div class="container">
             <p class="section__pretittle masters__pretittle">для настоящих ценителей атмосферы</p>
             <h2 class="section__tittle masters__tittle">Наши мастера</h2>
             <ul class="masters__list list">
@@ -191,6 +209,7 @@
             </ul>
         </section>
         <section class="section gallery">
+            <div class="container">
             <p class="section__pretittle gallerety__pretittle">На латинском языке “барба” означает “борода”</p>
             <ul class="gallery__list list">
                 <li class="gallery__item">
@@ -214,9 +233,11 @@
                     </picture>
                 </li>
             </ul>
+            </div>
         </section>
 
         <section class="section">
+            <div class="container">
             <div class="form-box">
                 <form>
                     <h2>Онлайн-запись</h2>
@@ -256,18 +277,21 @@
                 <p>Ежедневно с<br>
                 9:00 до 22:00</p>
             </div>
+            </div>
         </section>
     </main>
     <footer class="footer">
-        <p>&copy; Copyright 2020</p>
-        <ul class="footer__list list">
-            <li class="footer__item">
-                <a href="" class="footer__social link">Instagram</a>
-            </li>
-            <li class="footer__item">
-                <a href="" class="footer__social link">Youtube</a>
-            </li>
-        </ul>
+        <div class="container">
+            <p>&copy; Copyright 2020</p>
+            <ul class="footer__list list">
+                <li class="footer__item">
+                    <a href="" class="footer__social link">Instagram</a>
+                </li>
+                <li class="footer__item">
+                    <a href="" class="footer__social link">Youtube</a>
+                </li>
+            </ul>
+        </div>
     </footer>
 </body>
 </html>

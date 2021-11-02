@@ -1,0 +1,39 @@
+.header {
+  position: absolute;
+  width: 100%;
+  padding-top: 40px;
+  & .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.logo {
+  fill: $primary-black-color;
+}
+
+.nav {
+  @media screen and (max-width: ($tablet - 1px)) {
+    display: none;
+  }
+}
+
+.header__contact {
+  @media screen and (max-width: ($tablet - 1px)) {
+    display: none;
+  }
+}
+
+.menu {
+  border: none;
+  background-color: transparent;
+  &__icon {
+    fill: $primary-white-color;
+  }
+
+  @media screen and (min-width: $tablet) {
+    display: none;
+  }
+}
