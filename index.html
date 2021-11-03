@@ -51,68 +51,77 @@
     </header>
 
     <main>
-        <section class="section hero">
-            <div class="container">
+        <section class="hero">
+            
+            <ul class="hero__list list">
+                <li class="hero__item">
+                    <a href="" class="hero__social link">Instagram</a>
+                </li>
+                <li class="hero__item">
+                    <a href="" class="hero__social link">Youtube</a>
+                </li>
+            </ul>
+            <div class="hero__wrapper">
                 <p class="section__pretittle hero__pretittle" lang="en">A hair salon for men in Kyiv</p>
                 <h1 class="hero__tittle">BarberShop</h1>
-                <p class="section__after-tittle hero__after-tittle">Мы эксперты в модных мужских стрижках.</p>
-                <ul class="hero__list list">
-                    <li class="hero__item">
-                        <a href="" class="hero__social link">Instagram</a>
-                    </li>
-                    <li class="hero__item">
-                        <a href="" class="hero__social link">Youtube</a>
-                    </li>
-                </ul>
-            </div>
+                <p class="section__after-tittle hero__after-tittle">Мы эксперты в модных мужских стрижках. Работаем быстро, осторожно и со вкусом.</p>
+            </div>                
+            
         </section>
 
         <section id="about" class="section about">
             <div class="container">
-            <ul class="about__list list">
-                <li class="about__item">
-                    <picture>
-                        <img src="" alt="" class="about__img">
-                    </picture>
-                </li>
-                <li class="about__item">
-                    <picture>
-                        <img src="" alt="" class="about__img">
-                    </picture>
-                </li>
-            </ul>
+                <ul class="about__list list">
+                    <li class="about__item">
+                        <picture>
+                            <source srcset="./images/about1-desktop.jpg 270w, ./images/about1-desktop@2x 540w" media="(min-width: 1280px)" sizes="(min-width: 270px) 270px, 100vw">
+                            <source srcset="./images/about1-tablet.jpg 330w, ./images/about1-tablet@2x 660w" media="(min-width: 768px)" sizes="(min-width: 330px) 330px, 100vw">
+                            <img src="./images/about1-tablet.jpg" alt="" class="about__img">
+                        </picture>
+                    </li>
+                    <li class="about__item">
+                        <picture>
+                            <source srcset="./images/about2-desktop.jpg 270w, ./images/about2-desktop@2x 540w" media="(min-width: 1280px)"
+                                sizes="(min-width: 270px) 270px, 100vw">
+                            <source srcset="./images/about2-tablet.jpg 330w, ./images/about2-tablet@2x 660w" media="(min-width: 768px)"
+                                sizes="(min-width: 330px) 330px, 100vw">
+                            <img src="./images/about2-tablet.jpg" alt="" class="about__img">
+                        </picture>
+                    </li>
+                </ul>
 
-            <p class="section__pretittle about__pretittle">о нас</p>
-            <h2 class="section__tittle about__tittle">Лучший Барбершоп твоего города</h2>
-            <p class="section__after-tittle about__after-tittle">Если ты хочешь добавить в свой образ больше уверенности – тебе точно к нам.</p>
-            <p class="about__text">Мы команда, которая никогда не останавливается на достигнутом
-            и жаждет перемен. И когда ты попадешь в руки нашего мастера,
-            то уже никогда не сможешь быть прежним. Мы команда, которая всегда с клиентами "на одной волне". Поэтому, мы всегда
-            готовы усовершенствовать каждого, кто к нам приходит!</p>
-            <a href="#form" class="about__btn link">онлайн-запись</a>
+                <p class="section__pretittle about__pretittle">о нас</p>
+                <h2 class="section__tittle about__tittle">Лучший Барбершоп твоего города</h2>
+                <p class="section__after-tittle about__after-tittle">Если ты хочешь добавить в свой образ больше уверенности – тебе точно к нам.</p>
+                <p class="about__text">Мы команда, которая никогда не останавливается на достигнутом
+                и жаждет перемен. И когда ты попадешь в руки нашего мастера,
+                то уже никогда не сможешь быть прежним. Мы команда, которая всегда с клиентами "на одной волне". Поэтому, мы всегда
+                готовы усовершенствовать каждого, кто к нам приходит!</p>
+                <a href="#form" class="about__btn btn link">онлайн-запись</a>
             </div>
             
         </section>
 
         <section id="prices"class="section prices">
             <div class="container">
-            <p class="section__pretittle prices__pretittle">проведи время в компании лучших мастеров</p>
-            <h2 class="section__tittle prices__tittle">Услуги и цены</h2>
-            <ul class="prices__left-list">
-                <li class="prices__item">Мужская стрижка <span>от 300 грн.</span></li>
-                <li class="prices__item">Стрижка бороды <span>от 200 грн.</span></li>
-                <li class="prices__item">Стрижка усов <span>от 200 грн.</span></li>
-                <li class="prices__item">Бритье опасной бритвой <span>от 200 грн.</span></li>
-            </ul>
+                <p class="section__pretittle prices__pretittle">проведи время в компании лучших мастеров</p>
+                <h2 class="section__tittle prices__tittle">Услуги и цены</h2>
+                <div class="prices__wrap">
+                    <ul class="prices__list prices__list--left list">
+                        <li class="prices__item"><p class="prices__type"> Мужская стрижка </p><span>от 300 грн.</span></li>
+                        <li class="prices__item"><p class="prices__type"> Стрижка бороды </p><span>от 200 грн.</span></li>
+                        <li class="prices__item"><p class="prices__type"> Стрижка усов </p><span>от 200 грн.</span></li>
+                        <li class="prices__item"><p class="prices__type"> Бритье опасной бритвой </p><span>от 200 грн.</span></li>
+                    </ul>
 
-            <ul class="prices__right-list">
-                <li class="prices__item">Cтрижка у стажера <span>от 50 грн.</span></li>
-                <li class="prices__item">Стрижка под насадку <span>от 200 грн.</span></li>
-                <li class="prices__item">Стрижка усов <span>от 200 грн.</span></li>
-                <li class="prices__item">Стрижка под насадку <span>от 200 грн.</span></li>
-            </ul>
-            
-            <button type="button" class="prices__btn btn">онлайн-запись</button>
+                    <ul class="prices__list prices__list--right list">
+                        <li class="prices__item"><p class="prices__type">Cтрижка у стажера</p> <span>от 50 грн.</span></li>
+                        <li class="prices__item"><p class="prices__type">Стрижка под насадку</p> <span>от 200 грн.</span></li>
+                        <li class="prices__item"><p class="prices__type">Стрижка усов</p> <span>от 200 грн.</span></li>
+                        <li class="prices__item"><p class="prices__type">Стрижка под насадку</p> <span>от 200 грн.</span></li>
+                    </ul>
+                </div>
+                <a href="#form" type="button" class="prices__btn btn link">онлайн-запись</a>
             </div>
         </section>
 

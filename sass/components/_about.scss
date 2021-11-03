@@ -1,0 +1,29 @@
+.about__list {
+  @media screen and (max-width: ($tablet - 1px)) {
+    display: none;
+  }
+}
+
+.about__pretittle {
+  color: $primary-black-color;
+  &::before {
+    background-color: $primary-black-color;
+  }
+}
+
+.about__tittle {
+  color: $primary-black-color;
+}
+
+.about__after-tittle {
+  margin-bottom: 20px;
+}
+
+.about__text {
+  @include font(14px, (26 / 14));
+  margin-bottom: 40px;
+}
+
+.about__btn {
+  color: $primary-black-color;
+}
