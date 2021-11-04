@@ -74,8 +74,8 @@
                 <ul class="about__list list">
                     <li class="about__item">
                         <picture>
-                            <source srcset="./images/about1-desktop.jpg 270w, ./images/about1-desktop@2x 540w" media="(min-width: 1280px)" sizes="(min-width: 270px) 270px, 100vw">
-                            <source srcset="./images/about1-tablet.jpg 330w, ./images/about1-tablet@2x 660w" media="(min-width: 768px)" sizes="(min-width: 330px) 330px, 100vw">
+                            <source srcset="./images/about1-desktop.jpg 270w, ./images/about1-desktop@2x.jpg 540w" media="(min-width: 1280px)" sizes="(min-width: 270px) 270px, 100vw">
+                            <source srcset="./images/about1-tablet.jpg 330w, ./images/about1-tablet@2x.jpg 660w" media="(min-width: 768px)" sizes="(min-width: 330px) 330px, 100vw">
                             <img src="./images/about1-tablet.jpg" alt="" class="about__img">
                         </picture>
                     </li>
@@ -127,27 +127,28 @@
 
         <section class="section advantages">
             <div class="container">
-            <ul class="advantages__list list">
-                <li class="advantages__item">
-                    <span class="advantages__number">600</span>
-                    <span class="advantages__text">Довольных клиентов в день</span>
-                </li>
-                <li class="advantages__item">
-                    <span class="advantages__number">50</span>
-                    <span class="advantages__text">Наград за отличный сервис</span>
-                </li>
-                <li class="advantages__item">
-                    <span class="advantages__number">20</span>
-                    <span class="advantages__text">Лучших мастеров Киева</span>
-                </li>
-                <li class="advantages__item">
-                    <span class="advantages__number">100</span>
-                    <span class="advantages__text">Подарков постоянным клиентам</span>
-                </li>
-            </ul>
-            <p class="section__pretittle advantages__pretittle">старая традиционная школа</p>
-            <h2 class="section__tittle advantages__tittle">Почему приходят именно к нам?</h2>
-            <p class="section__after-tittle advantages__after-tittle">О нас говорят только хорошее. Но лучше 1 раз увидеть и прочувствовать, чем 10 раз прочитать.</p>
+                
+                <p class="section__pretittle advantages__pretittle">старая традиционная школа</p>
+                <h2 class="section__tittle advantages__tittle">Почему приходят именно к нам?</h2>
+                <p class="section__after-tittle advantages__after-tittle">О нас говорят только хорошее. Но лучше 1 раз увидеть и прочувствовать, чем 10 раз прочитать.</p>
+                <ul class="advantages__list list">
+                    <li class="advantages__item">
+                        <span class="advantages__number">600</span>
+                        <span class="advantages__text">Довольных клиентов в день</span>
+                    </li>
+                    <li class="advantages__item">
+                        <span class="advantages__number">50</span>
+                        <span class="advantages__text">Наград за отличный сервис</span>
+                    </li>
+                    <li class="advantages__item">
+                        <span class="advantages__number">20</span>
+                        <span class="advantages__text">Лучших мастеров Киева</span>
+                    </li>
+                    <li class="advantages__item advantages__item--padding">
+                        <span class="advantages__number">100</span>
+                        <span class="advantages__text">Подарков постоянным клиентам</span>
+                    </li>
+                </ul>
             </div>
         </section>
 
@@ -156,63 +157,139 @@
             <p class="section__pretittle masters__pretittle">для настоящих ценителей атмосферы</p>
             <h2 class="section__tittle masters__tittle">Наши мастера</h2>
             <ul class="masters__list list">
-                <li class="masters__list">
+                <li class="masters__item">
                     <picture>
-                        <img src="" alt="" class="masters__img">
+                        <source srcset="./images/master1-desktop.jpg 370w, ./images/master1-desktop@2x.jpg 740w" media="(min-width: 1280px)"
+                            sizes="(min-width: 370px) 370px, 100vw">
+                        <source srcset="./images/master1-tablet.jpg 450w, ./images/master1-tablet@2x.jpg 900w" media="(min-width: 768px)"
+                            sizes="(min-width: 450px) 450px, 100vw">
+                            <source srcset="./images/master1-mobile.jpg 418w, ./images/master1-mobile@2x.jpg 836w" media="(max-width: 767px)"
+                                sizes="(min-width: 418px) 418px, 100vw">
+                        <img src="./images/master1-mobile.jpg" alt="" class="masters__img">
                     </picture>
                     <div class="masters__thumb">
-                        <h3 class="masters__name"></h3>
-                        <p class="masters__desc"></p>
-                        <ul class="social__list list">
-                            <li class="social__item">
-                                <a href="" class="social__link">
-                                    <svg width="20" height="20">
-                                        <use></use>
+                        <h3 class="masters__name">John Smith</h3>
+                        <p class="masters__desc">Extreme Barber</p>
+                        <ul class="masters-social list">
+                            <li class="masters-social__item">
+                                <a href="" class="masters-social__link">
+                                    <svg class="masters-social__icon">
+                                        <use href="./images/sprite.svg#icon-instagram"></use>
                                     </svg>
                                 </a>
                             </li>
-                            <li class="social__item">
-                                <a href="" class="social__link">
-                                    <svg width="20" height="20">
-                                        <use></use>
+                            <li class="masters-social__item">
+                                <a href="" class="masters-social__link link">
+                                    <svg class="masters-social__icon">
+                                        <use href="./images/sprite.svg#icon-twitter"></use>
                                     </svg>
                                 </a>
                             </li>
-                            <li class="social__item">
-                                <a href="" class="social__link">
-                                    <svg width="20" height="20">
-                                        <use></use>
+                            <li class="masters-social__item">
+                                <a href="" class="masters-social__link link">
+                                    <svg class="masters-social__icon">
+                                        <use href="./images/sprite.svg#icon-facebook"></use>
                                     </svg>
                                 </a>
                             </li>
-                            <li class="social__item">
-                                <a href="" class="social__link">
-                                    <svg width="20" height="20">
-                                        <use></use>
+                            <li class="masters-social__item">
+                                <a href="" class="masters-social__link link">
+                                    <svg class="masters-social__icon">
+                                        <use href="./images/sprite.svg#icon-linkedin"></use>
                                     </svg>
                                 </a>
                             </li>
                         </ul>
                     </div>
                 </li>
-                <li class="masters__list">
+                <li class="masters__item">
                     <picture>
-                        <img src="" alt="" class="masters__img">
+                        <source srcset="./images/master2-desktop.jpg 370w, ./images/master2-desktop@2x.jpg 740w" media="(min-width: 1280px)"
+                            sizes="(min-width: 370px) 370px, 100vw">
+                        <source srcset="./images/master2-tablet.jpg 450w, ./images/master2-tablet@2x.jpg 900w" media="(min-width: 768px)"
+                            sizes="(min-width: 450px) 450px, 100vw">
+                        <source srcset="./images/master2-mobile.jpg 418w, ./images/master2-mobile@2x.jpg 836w" media="(max-width: 767px)"
+                            sizes="(min-width: 418px) 418px, 100vw">
+                        <img src="./images/master1-mobile.jpg" alt="" class="masters__img">
                     </picture>
                     <div class="masters__thumb">
-                        <h3 class="masters__name"></h3>
-                        <p class="masters__desc"></p>
-                        
+                        <h3 class="masters__name">Michele Doe</h3>
+                        <p class="masters__desc">Extreme Barber</p>
+                        <ul class="masters-social list">
+                            <li class="masters-social__item">
+                                <a href="" class="masters-social__link">
+                                    <svg class="masters-social__icon">
+                                        <use href="./images/sprite.svg#icon-instagram"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="masters-social__item">
+                                <a href="" class="masters-social__link link">
+                                    <svg class="masters-social__icon">
+                                        <use href="./images/sprite.svg#icon-twitter"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="masters-social__item">
+                                <a href="" class="masters-social__link link">
+                                    <svg class="masters-social__icon">
+                                        <use href="./images/sprite.svg#icon-facebook"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="masters-social__item">
+                                <a href="" class="masters-social__link link">
+                                    <svg class="masters-social__icon">
+                                        <use href="./images/sprite.svg#icon-linkedin"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                        </ul>
                     </div>
                 </li>
-                <li class="masters__list">
+                <li class="masters__item">
                     <picture>
-                        <img src="" alt="" class="masters__img">
+                        <source srcset="./images/master3-desktop.jpg 370w, ./images/master3-desktop@2x.jpg 740w" media="(min-width: 1280px)"
+                            sizes="(min-width: 370px) 370px, 100vw">
+                        <source srcset="./images/master3-tablet.jpg 450w, ./images/master3-tablet@2x.jpg 900w" media="(min-width: 768px)"
+                            sizes="(min-width: 450px) 450px, 100vw">
+                        <source srcset="./images/master3-mobile.jpg 418w, ./images/master3-mobile@2x.jpg 836w" media="(max-width: 767px)"
+                            sizes="(min-width: 418px) 418px, 100vw">
+                        <img src="./images/master1-mobile.jpg" alt="" class="masters__img">
                     </picture>
                     <div class="masters__thumb">
-                        <h3 class="masters__name"></h3>
-                        <p class="masters__desc"></p>
-
+                        <h3 class="masters__name">Alan Black</h3>
+                        <p class="masters__desc">Extreme Barber</p>
+                        <ul class="masters-social list">
+                            <li class="masters-social__item">
+                                <a href="" class="masters-social__link">
+                                    <svg class="masters-social__icon">
+                                        <use href="./images/sprite.svg#icon-instagram"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="masters-social__item">
+                                <a href="" class="masters-social__link link">
+                                    <svg class="masters-social__icon">
+                                        <use href="./images/sprite.svg#icon-twitter"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="masters-social__item">
+                                <a href="" class="masters-social__link link">
+                                    <svg class="masters-social__icon">
+                                        <use href="./images/sprite.svg#icon-facebook"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li class="masters-social__item">
+                                <a href="" class="masters-social__link link">
+                                    <svg class="masters-social__icon">
+                                        <use href="./images/sprite.svg#icon-linkedin"></use>
+                                    </svg>
+                                </a>
+                            </li>
+                        </ul>
                     </div>
                 </li>
             </ul>

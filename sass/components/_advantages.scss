@@ -1,0 +1,60 @@
+.advantages__pretittle {
+  color: $primary-black-color;
+
+  &::before {
+    background-color: $primary-black-color;
+  }
+}
+
+.advantages__tittle {
+  color: $primary-black-color;
+}
+
+.advantages__after-tittle {
+  @include font(18px, (30 / 18));
+  margin-bottom: 44px;
+}
+
+.advantages__list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.advantages__item {
+  background-color: $third-bg-color;
+  padding: 20px 36px;
+  width: 193px;
+  height: 133px;
+  text-align: center;
+
+  &--padding {
+    padding: 20px 32px;
+  }
+
+  &:nth-child(odd) {
+    margin-right: 30px;
+  }
+
+  &:nth-child(even) {
+    margin-top: 30px;
+  }
+}
+
+.advantages__number {
+  @include font(42px, (57/42), 700, 0.05em);
+  color: $primary-black-color;
+  display: flex;
+  justify-content: center;
+
+  &::after {
+    content: '+';
+    @include font(16px, (22/16), 600);
+    color: $accent-color;
+  }
+}
+
+.advantages__text {
+  @include font(11px, (15/11), 600, 0em);
+  text-align: center;
+  color: $primary-black-color;
+}

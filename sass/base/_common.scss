@@ -1,5 +1,5 @@
 body {
-  background-color: $primary-bg-color;
+  background-color: $primary-white-color;
   color: $primary-text-color;
   font-family: $primary-font-family;
   letter-spacing: 0.02em;
@@ -58,6 +58,7 @@ body {
 
   &__tittle {
     @include font(28px, (33 / 28), 700, 0.05em);
+    font-family: $tittle-font-family;
     margin-bottom: 20px;
   }
 
