@@ -1,0 +1,121 @@
+.contact {
+  background-color: $contact-bg;
+  padding-bottom: 0;
+  & .container {
+    padding: 0;
+  }
+}
+
+.form {
+  padding: 0 31px 84px 31px;
+  text-align: center;
+  &__heading {
+    @include font(42px, (49 / 42), 700, 00.05em);
+    color: $primary-white-color;
+    text-align: center;
+    margin-bottom: 44px;
+    font-family: $tittle-font-family;
+  }
+
+  &__label {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 44px;
+  }
+
+  &__placeholder {
+    @include font(11px, (15 / 11), 600, 0.1em);
+    text-transform: uppercase;
+    color: $pre-tittle-color;
+    transition: color $transition-duration $timing-function,
+      transform $transition-duration $timing-function;
+    position: absolute;
+
+    .form__input:focus + &,
+    .form__textarea:focus + & {
+      color: $primary-white-color;
+      transform: translateY(-16px);
+    }
+  }
+
+  &__input {
+    background-color: transparent;
+    height: 24px;
+    border: none;
+    border-bottom: 1px solid $pre-tittle-color;
+    outline: none;
+    transition: border-color $transition-duration $timing-function;
+    color: $primary-white-color;
+    &:focus-visible {
+      border-color: $primary-white-color;
+    }
+  }
+
+  &__textarea {
+    height: 76px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid $pre-tittle-color;
+    outline: none;
+    transition: border-color $transition-duration $timing-function;
+    color: $primary-white-color;
+    &:focus-visible {
+      border-color: $primary-white-color;
+    }
+  }
+
+  &__btn {
+    padding: 12px 36px;
+    color: $primary-white-color;
+  }
+}
+
+.contacts {
+  padding: 84px 31px 84px 31px;
+  background-image: url(../images/contacts-mobile.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @media screen and (min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+    background-image: url(../images/contacts-mobile@2x.png);
+  }
+
+  @media screen and (min-width: $tablet) and (max-width: ($desktop - 1px)) {
+    background-image: url(../images/contacts-tablet.png);
+
+    @media screen and (min-device-pixel-ratio: 2),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      background-image: url(../images/contacts-tablet@2x.png);
+    }
+  }
+
+  @media screen and (min-width: $desktop) {
+    background-image: url(../images/contacts-desktop.png);
+
+    @media screen and (min-device-pixel-ratio: 2),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      background-image: url(../images/hero-desktop@2x.png);
+    }
+  }
+
+  &__heading {
+    @include font(42px, (49 / 42), 700, 00.05em);
+    font-family: $tittle-font-family;
+    color: $primary-white-color;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  .contacts__icon {
+    width: 24px;
+    height: 24px;
+    fill: none;
+  }
+}

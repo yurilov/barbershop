@@ -11,7 +11,7 @@ body {
   margin: 0 auto;
 
   @media screen and (max-width: ($tablet - 1px)) {
-    max-width: $mobile;
+    width: $mobile;
   }
 
   @media screen and (min-width: $tablet) and (max-width: ($desktop - 1px)) {
@@ -30,6 +30,11 @@ body {
 .section {
   padding-top: 84px;
   padding-bottom: 84px;
+
+  @media screen and (max-width: ($tablet - 1px)) {
+    margin: 0 auto;
+    width: $mobile;
+  }
 
   @media screen and (min-width: $tablet) {
     padding-top: 100px;
@@ -75,4 +80,12 @@ body {
   border-radius: 25px;
   border: 1px solid $accent-color;
   text-transform: uppercase;
+  transition: color $transition-duration $timing-function,
+    background-color $transition-duration $timing-function;
+
+  &:focus,
+  &:hover {
+    background-color: $accent-color;
+    color: $primary-white-color;
+  }
 }

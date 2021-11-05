@@ -296,73 +296,113 @@
         </section>
         <section class="section gallery">
             <div class="container">
-            <p class="section__pretittle gallerety__pretittle">На латинском языке “барба” означает “борода”</p>
+            <p class="section__pretittle gallery__pretittle">На латинском языке “барба” означает “борода”</p>
             <ul class="gallery__list list">
                 <li class="gallery__item">
                     <picture>
-                        <img src="" alt="" class="gallery__img">
+                        <source srcset="./images/gallery1-desktop.jpg 270w, ./images/gallery1-desktop@2x.jpg 540w" media="(min-width: 1280px)"
+                            sizes="(min-width: 270px) 270px, 100vw">
+                        <source srcset="./images/gallery1-tablet.jpg 330w, ./images/gallery1-tablet@2x.jpg 660w" media="(min-width: 768px)"
+                            sizes="(min-width: 330px) 330px, 100vw">
+                        <source srcset="./images/gallery1-mobile.jpg 418w, ./images/gallery1-mobile@2x.jpg 836w" media="(max-width: 767px)"
+                            sizes="(min-width: 418px) 418px, 100vw">
+                        <img src="./images/gallery1-mobile.jpg" alt="" class="gallery__img">
                     </picture>
                 </li>
                 <li class="gallery__item">
                     <picture>
-                        <img src="" alt="" class="gallery__img">
+                        <source srcset="./images/gallery2-desktop.jpg 270w, ./images/gallery2-desktop@2x.jpg 540w"
+                            media="(min-width: 1280px)" sizes="(min-width: 270px) 270px, 100vw">
+                        <source srcset="./images/gallery2-tablet.jpg 330w, ./images/gallery2-tablet@2x.jpg 660w" media="(min-width: 768px)"
+                            sizes="(min-width: 330px) 330px, 100vw">
+                        <source srcset="./images/gallery2-mobile.jpg 418w, ./images/gallery2-mobile@2x.jpg 836w" media="(max-width: 767px)"
+                            sizes="(min-width: 418px) 418px, 100vw">
+                        <img src="./images/gallery2-mobile.jpg" alt="" class="gallery__img">
                     </picture>
                 </li>
                 <li class="gallery__item">
                     <picture>
-                        <img src="" alt="" class="gallery__img">
+                        <source srcset="./images/gallery3-desktop.jpg 270w, ./images/gallery3-desktop@2x.jpg 540w"
+                            media="(min-width: 1280px)" sizes="(min-width: 270px) 270px, 100vw">
+                        <source srcset="./images/gallery3-tablet.jpg 330w, ./images/gallery3-tablet@2x.jpg 660w" media="(min-width: 768px)"
+                            sizes="(min-width: 330px) 330px, 100vw">
+                        <source srcset="./images/gallery3-mobile.jpg 418w, ./images/gallery3-mobile@2x.jpg 836w" media="(max-width: 767px)"
+                            sizes="(min-width: 418px) 418px, 100vw">
+                        <img src="./images/gallery3-mobile.jpg" alt="" class="gallery__img">
                     </picture>
                 </li>
                 <li class="gallery__item">
                     <picture>
-                        <img src="" alt="" class="gallery__img">
+                        <source srcset="./images/gallery4-desktop.jpg 270w, ./images/gallery4-desktop@2x.jpg 540w"
+                            media="(min-width: 1280px)" sizes="(min-width: 270px) 270px, 100vw">
+                        <source srcset="./images/gallery4-tablet.jpg 330w, ./images/gallery4-tablet@2x.jpg 660w" media="(min-width: 768px)"
+                            sizes="(min-width: 330px) 330px, 100vw">
+                        <source srcset="./images/gallery4-mobile.jpg 418w, ./images/gallery4-mobile@2x.jpg 836w" media="(max-width: 767px)"
+                            sizes="(min-width: 418px) 418px, 100vw">
+                        <img src="./images/gallery4-mobile.jpg" alt="" class="gallery__img">
                     </picture>
                 </li>
             </ul>
             </div>
         </section>
 
-        <section class="section">
+        <section class="section contact">
             <div class="container">
-            <div class="form-box">
-                <form>
-                    <h2>Онлайн-запись</h2>
-                    <label>
-                        <span>Имя*</span>
-                        <input type="text" name="name">
-                    </label>
-                </form>
-                <label>
-                    <span>Телефон*</span>
-                    <input type="tel" name="tel">
-                </label>
-                <label>
-                    <span>сообщение</span>
-                    <textarea name="message"></textarea>
-                </label>
-                <button type="submit" class="btn">отправить</button>
-            </div>
-            <div class="contacts">
-                <h2>Контакты</h2>
-                <address>
-                    <ul>
-                        <li>
-                            <a href="">ул. Васильковая, 7А
-                            Киев, 08132</a>
-                        </li>
-                        <li>
-                            <a href="tel:+380441111111">+38 044 111 11 11</a>
-                        </li>
-                        <li>
-                            <a href="mailto:barbershop@email.com">barbershop@email.com</a>
-                        </li>
-                    </ul>
-                </address>
+                <div class="form-box">
+                    <form class="form" id="form">
+                        <h2 class="form__heading">Онлайн-запись</h2>
+                        <label class="form__label">
+                            
+                            <input type="text" name="name" class="form__input">
+                            <span class="form__placeholder">Имя*</span>
+                        </label>
+                    
+                        <label class="form__label">
+                            
+                            <input type="tel" name="tel" class="form__input">
+                            <span class="form__placeholder">Телефон*</span>
+                        </label>
+                        <label class="form__label">
+                            
+                            <textarea name="message" class="form__textarea"></textarea>
+                            <span class="form__placeholder">сообщение</span>
+                        </label>
+                        <button type="submit" class="btn form__btn">отправить</button>
+                    </form>
+                </div>
+                <div class="contacts">
+                    <h2 class="contacts__heading">Контакты</h2>
+                    <address>
+                        <ul class="contacts__list list">
+                            <li class="contacts__item">
+                                <a href="" class="contacts__link link">
+                                    <svg class="contacts__icon">
+                                        <use href="./images/sprite.svg#icon-map-pin"></use>
+                                    </svg>
+                                    ул. Васильковая, 7А
+                                Киев, 08132</a>
+                            </li>
+                            <li class="contacts__item">
+                                <a href="tel:+380441111111" class="contacts__link link">
+                                    <svg class="contacts__icon">
+                                        <use href="./images/sprite.svg#icon-phone"></use>
+                                    </svg>
+                                    +38 044 111 11 11</a>
+                            </li>
+                            <li class="contacts__item">
+                                <a href="mailto:barbershop@email.com" class="contacts__link link">
+                                    <svg class="contacts__icon">
+                                        <use href="./images/sprite.svg#icon-mail"></use>
+                                    </svg>
+                                    barbershop@email.com</a>
+                            </li>
+                        </ul>
+                    </address>
 
-                <p>время работы</p>
-                <p>Ежедневно с<br>
-                9:00 до 22:00</p>
-            </div>
+                    <p>время работы</p>
+                    <p>Ежедневно с<br>
+                    9:00 до 22:00</p>
+                </div>
             </div>
         </section>
     </main>
