@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Raleway:wght@700&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&family=Raleway:wght@700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
         integrity="sha512-wpPYUAdjBVSE4KJnH1VR1HeZfpl1ub8YT/NKx4PuQ5NmX2tKuGu6U/JRp5y+Y8XG2tV+wKQpNHVUX03MfMFn9Q=="
@@ -40,10 +40,12 @@
             </nav>
             <div class="header__contact">
                 <a href="tel:+380441111111" class="header__link link">+38 044 111 11 11</a>
-                <a href="#form" class="header__btn link">онлайн-запись</a>
+                <a href="#form" class="header__btn btn link">онлайн-запись</a>
             </div>
-            <button type="button" class="menu">
-                <svg width="40" height="40" class="menu__icon">
+            <button type="button" class="menu-open js-open-menu"
+                aria-expanded="false"
+                aria-controls="mobile-menu">
+                <svg width="40" height="40" class="menu-open__icon">
                     <use href="./images/sprite.svg#icon-menu"></use>
                 </svg>
             </button>
@@ -81,9 +83,9 @@
                     </li>
                     <li class="about__item">
                         <picture>
-                            <source srcset="./images/about2-desktop.jpg 270w, ./images/about2-desktop@2x 540w" media="(min-width: 1280px)"
+                            <source srcset="./images/about2-desktop.jpg 270w, ./images/about2-desktop@2x.jpg 540w" media="(min-width: 1280px)"
                                 sizes="(min-width: 270px) 270px, 100vw">
-                            <source srcset="./images/about2-tablet.jpg 330w, ./images/about2-tablet@2x 660w" media="(min-width: 768px)"
+                            <source srcset="./images/about2-tablet.jpg 330w, ./images/about2-tablet@2x.jpg 660w" media="(min-width: 768px)"
                                 sizes="(min-width: 330px) 330px, 100vw">
                             <img src="./images/about2-tablet.jpg" alt="" class="about__img">
                         </picture>
@@ -102,7 +104,7 @@
             
         </section>
 
-        <section id="prices"class="section prices">
+        <section id="prices" class="section prices">
             <div class="container">
                 <p class="section__pretittle prices__pretittle">проведи время в компании лучших мастеров</p>
                 <h2 class="section__tittle prices__tittle">Услуги и цены</h2>
@@ -152,7 +154,7 @@
             </div>
         </section>
 
-        <section class="section masters">
+        <section id="masters" class="section masters">
             <div class="container">
             <p class="section__pretittle masters__pretittle">для настоящих ценителей атмосферы</p>
             <h2 class="section__tittle masters__tittle">Наши мастера</h2>
@@ -346,7 +348,7 @@
             </div>
         </section>
 
-        <section class="section contact">
+        <section id="contacts" class="section contact">
             <div class="container">
                 <div class="form-box">
                     <form class="form" id="form">
@@ -372,45 +374,44 @@
                 </div>
                 <div class="contacts">
                     <h2 class="contacts__heading">Контакты</h2>
-                    <address>
+                    <address class="contacts__address">
                         <ul class="contacts__list list">
                             <li class="contacts__item">
                                 <a href="" class="contacts__link link">
                                     <svg class="contacts__icon">
                                         <use href="./images/sprite.svg#icon-map-pin"></use>
                                     </svg>
-                                    ул. Васильковая, 7А
-                                Киев, 08132</a>
+                                    <span>ул. Васильковая, 7А
+                                Киев, 08132</span></a>
                             </li>
                             <li class="contacts__item">
                                 <a href="tel:+380441111111" class="contacts__link link">
                                     <svg class="contacts__icon">
                                         <use href="./images/sprite.svg#icon-phone"></use>
                                     </svg>
-                                    +38 044 111 11 11</a>
+                                    <span>+38 044 111 11 11</span></a>
                             </li>
                             <li class="contacts__item">
-                                <a href="mailto:barbershop@email.com" class="contacts__link link">
+                                <a href="mailto:barbershop@email.com" class="contacts__link">
                                     <svg class="contacts__icon">
                                         <use href="./images/sprite.svg#icon-mail"></use>
                                     </svg>
-                                    barbershop@email.com</a>
+                                    <span>barbershop@email.com</span></a>
                             </li>
                         </ul>
                     </address>
 
-                    <p>время работы</p>
-                    <p>Ежедневно с<br>
-                    9:00 до 22:00</p>
+                    <p class="contacts__time-tittle section__pretittle">время работы</p>
+                    <p class="contacts__time-text">Ежедневно с 9:00 до 22:00</p>
                 </div>
             </div>
         </section>
     </main>
     <footer class="footer">
         <div class="container">
-            <p>&copy; Copyright 2020</p>
+            <p class="footer__copy">&copy; Copyright 2020</p>
             <ul class="footer__list list">
-                <li class="footer__item">
+                <li class="footer__item footer__item--margin">
                     <a href="" class="footer__social link">Instagram</a>
                 </li>
                 <li class="footer__item">
@@ -419,5 +420,47 @@
             </ul>
         </div>
     </footer>
+
+    <div class="backdrop js-menu-container" id="mobile-menu">
+        <div class="menu">
+            <button type="button" class="menu-close js-close-menu">
+                <svg width="40" height="40" class="menu-close__icon">
+                    <use href="./images/sprite.svg#icon-cross"></use>
+                </svg>
+            </button>
+            <nav class="menu-nav">
+                <ul class="menu-nav__list list">
+                    <li class="menu-nav__item">
+                        <a href="#about" class="menu-nav__link link">О нас</a>
+                    </li>
+                    <li class="menu-nav__item">
+                        <a href="#prices" class="menu-nav__link link">Услуги и цены</a>
+                    </li>
+                    <li class="menu-nav__item">
+                        <a href="#masters" class="menu-nav__link link">Мастера</a>
+                    </li>
+                    <li class="menu-nav__item">
+                        <a href="#contacts" class="menu-nav__link link">Контакты</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="menu-contact">
+                <a href="tel:+380441111111" class="menu-contact__link link">+38 044 111 11 11</a>
+                <a href="#form" class="menu-contact__btn btn link js-close-menu">онлайн-запись</a>
+            </div>
+            <ul class="menu-social list">
+                <li class="menu-social__item menu-social__item--margin">
+                    <a href="" class="menu-social__link link">Instagram</a>
+                </li>
+                <li class="menu-social__item">
+                    <a href="" class="menu-social__link link">Youtube</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+        integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+        crossorigin="anonymous"></script>
+    <script defer src="js/mobile-menu.js"></script>
 </body>
 </html>

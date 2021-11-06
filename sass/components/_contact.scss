@@ -113,9 +113,43 @@
     margin-bottom: 40px;
   }
 
-  .contacts__icon {
+  &__address {
+    margin-bottom: 44px;
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+  &__icon {
     width: 24px;
     height: 24px;
     fill: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+    margin-right: 16px;
+  }
+
+  &__link {
+    @include font(18px, (30 / 18), 400);
+    font-style: normal;
+    color: $after-tittle-color;
+
+    display: flex;
+  }
+
+  &__time-tittle {
+    &::before {
+      background-color: $primary-white-color;
+    }
+    color: $primary-white-color;
+  }
+
+  &__time-text {
+    @include font(18px, (30 / 18));
+    color: $after-tittle-color;
   }
 }
