@@ -5,13 +5,20 @@
     line-height: calc(21 / 11);
     &::before {
       background-color: $primary-black-color;
-      margin-bottom: 20px;
     }
   }
-  &__item {
-    &:not(:last-child) {
-      margin-bottom: 30px;
+  &__list {
+    margin-top: -30px;
+    margin-left: -30px;
+    @media screen and (min-width: $tablet) {
+      display: flex;
+      flex-wrap: wrap;
     }
+  }
+
+  &__item {
+    margin-top: 30px;
+    margin-left: 30px;
   }
 
   &__img {

@@ -3,16 +3,30 @@
   padding-bottom: 44px;
   height: 138px;
 
+  @media screen and (min-width: $tablet) {
+    height: 127px;
+    padding-top: 56px;
+    padding-left: 56px;
+  }
+
   & .container {
     display: flex;
     align-items: flex-start;
     height: 50px;
+    @media screen and (min-width: $tablet) {
+      height: auto;
+      align-items: center;
+      width: auto;
+    }
   }
 
   &__copy {
     align-self: flex-end;
     @include font(11px, (15 / 11), 600, 00.02em);
     color: $after-tittle-color;
+    @media screen and (min-width: $tablet) {
+      align-self: center;
+    }
   }
 
   &__list {
@@ -29,11 +43,19 @@
       background-color: $primary-black-color;
     }
   }
+
   &__item--margin {
     margin-right: 40px;
   }
+
   &__social {
     @include font(11px, (15 / 11), 600, 0.2em);
     color: $primary-black-color;
+    transition: color $transition-duration $timing-function;
+
+    &:focus,
+    &:hover {
+      color: $accent-color;
+    }
   }
 }

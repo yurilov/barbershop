@@ -5,7 +5,7 @@
   background-size: cover;
   background-color: $secondary-bg-color;
   // min-height: 826px;
-
+  margin: 0 auto;
   @media screen and (min-device-pixel-ratio: 2),
     screen and (min-resolution: 192dpi),
     screen and (min-resolution: 2dppx) {
@@ -13,7 +13,6 @@
   }
 
   @media screen and (max-width: ($tablet - 1px)) {
-    margin: 0 auto;
     max-width: $mobile;
   }
 
@@ -61,8 +60,19 @@
 
   &__list {
     @include font(14px, (30 / 14));
+
+    @media screen and (min-width: $tablet) {
+      @include font(18px, (30 / 18));
+    }
+
     color: $after-tittle-color;
     margin-top: -20px;
+
+    &--right {
+      @media screen and (max-width: ($desktop - 1px)) {
+        margin-top: 20px;
+      }
+    }
   }
 
   &__item {

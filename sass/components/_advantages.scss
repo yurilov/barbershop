@@ -18,6 +18,10 @@
 .advantages__list {
   display: flex;
   flex-wrap: wrap;
+
+  @media screen and (min-width: $tablet) and (max-width: ($desktop - 1px)) {
+    padding-left: 240px;
+  }
 }
 
 .advantages__item {
@@ -25,10 +29,19 @@
   padding: 20px 36px;
   width: 193px;
   height: 133px;
+
+  @media screen and (min-width: $tablet) {
+    padding: 20px 44px;
+    width: 210px;
+  }
+
   text-align: center;
 
   &--padding {
     padding: 20px 32px;
+    @media screen and (min-width: $tablet) {
+      padding: 20px 40px;
+    }
   }
 
   &:nth-child(odd) {

@@ -1,6 +1,10 @@
 .masters {
   background-color: $third-bg-color;
-
+  & .container {
+    @media screen and (min-width: $tablet) {
+      padding: 0 159px;
+    }
+  }
   &__pretittle {
     color: $primary-black-color;
 
@@ -13,6 +17,7 @@
     color: $primary-black-color;
     margin-bottom: 44px;
   }
+
   &__item {
     &:not(:last-child) {
       margin-bottom: 64px;

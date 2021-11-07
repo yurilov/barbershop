@@ -53,16 +53,17 @@
         </header>
 
         <main>
-            <section class="hero">
-                
-                <ul class="hero__list list">
-                    <li class="hero__item">
-                        <a href="" class="hero__social link">Instagram</a>
-                    </li>
-                    <li class="hero__item">
-                        <a href="" class="hero__social link">Youtube</a>
-                    </li>
-                </ul>
+            <section class="hero container">
+                <div class="hero__left">
+                    <ul class="hero__list list">
+                        <li class="hero__item hero__item--margin">
+                            <a href="" class="hero__social link">Instagram</a>
+                        </li>
+                        <li class="hero__item">
+                            <a href="" class="hero__social link">Youtube</a>
+                        </li>
+                    </ul>
+                </div>
                 <div class="hero__wrapper">
                     <p class="section__pretittle hero__pretittle" lang="en">A hair salon for men in Kyiv</p>
                     <h1 class="hero__tittle">BarberShop</h1>
@@ -74,7 +75,7 @@
             <section id="about" class="section about">
                 <div class="container">
                     <ul class="about__list list">
-                        <li class="about__item">
+                        <li class="about__item about__item--margin">
                             <picture>
                                 <source srcset="./images/about1-desktop.jpg 270w, ./images/about1-desktop@2x.jpg 540w" media="(min-width: 1280px)" sizes="(min-width: 270px) 270px, 100vw">
                                 <source srcset="./images/about1-tablet.jpg 330w, ./images/about1-tablet@2x.jpg 660w" media="(min-width: 768px)" sizes="(min-width: 330px) 330px, 100vw">
@@ -91,15 +92,16 @@
                             </picture>
                         </li>
                     </ul>
-
-                    <p class="section__pretittle about__pretittle">о нас</p>
-                    <h2 class="section__tittle about__tittle">Лучший Барбершоп твоего города</h2>
-                    <p class="section__after-tittle about__after-tittle">Если ты хочешь добавить в свой образ больше уверенности – тебе точно к нам.</p>
-                    <p class="about__text">Мы команда, которая никогда не останавливается на достигнутом
-                    и жаждет перемен. И когда ты попадешь в руки нашего мастера,
-                    то уже никогда не сможешь быть прежним. Мы команда, которая всегда с клиентами "на одной волне". Поэтому, мы всегда
-                    готовы усовершенствовать каждого, кто к нам приходит!</p>
-                    <a href="#form" class="about__btn btn link">онлайн-запись</a>
+                    <div class="about__wrap">
+                        <p class="section__pretittle about__pretittle">о нас</p>
+                        <h2 class="section__tittle about__tittle">Лучший Барбершоп твоего города</h2>
+                        <p class="section__after-tittle about__after-tittle">Если ты хочешь добавить в свой образ больше уверенности – тебе точно к нам.</p>
+                        <p class="about__text">Мы команда, которая никогда не останавливается на достигнутом
+                        и жаждет перемен. И когда ты попадешь в руки нашего мастера,
+                        то уже никогда не сможешь быть прежним. Мы команда, которая всегда с клиентами "на одной волне". Поэтому, мы всегда
+                        готовы усовершенствовать каждого, кто к нам приходит!</p>
+                        <a href="#form" class="about__btn btn link">онлайн-запись</a>
+                    </div>
                 </div>
                 
             </section>
@@ -300,6 +302,7 @@
 
             <section class="section gallery">
                 <div class="container">
+                <h2 class="visually-hidden">Галерея</h2>
                 <p class="section__pretittle gallery__pretittle">На латинском языке “барба” означает “борода”</p>
                 <ul class="gallery__list list">
                     <li class="gallery__item">
@@ -355,17 +358,19 @@
                     <div class="form-box">
                         <form class="form" id="form">
                             <h2 class="form__heading">Онлайн-запись</h2>
-                            <label class="form__label">
-                                
-                                <input type="text" name="name" class="form__input">
-                                <span class="form__placeholder">Имя*</span>
-                            </label>
-                        
-                            <label class="form__label">
-                                
-                                <input type="tel" name="tel" class="form__input">
-                                <span class="form__placeholder">Телефон*</span>
-                            </label>
+                            <div class="form__input-wrap">
+                                <label class="form__label form__label--margin">
+                                    
+                                    <input type="text" name="name" class="form__input">
+                                    <span class="form__placeholder">Имя*</span>
+                                </label>
+                            
+                                <label class="form__label">
+                                    
+                                    <input type="tel" name="tel" class="form__input">
+                                    <span class="form__placeholder">Телефон*</span>
+                                </label>
+                            </div>
                             <label class="form__label">
                                 
                                 <textarea name="message" class="form__textarea"></textarea>
@@ -376,35 +381,39 @@
                     </div>
                     <div class="contacts">
                         <h2 class="contacts__heading">Контакты</h2>
-                        <address class="contacts__address">
-                            <ul class="contacts__list list">
-                                <li class="contacts__item">
-                                    <a href="" class="contacts__link link">
-                                        <svg class="contacts__icon">
-                                            <use href="./images/sprite.svg#icon-map-pin"></use>
-                                        </svg>
-                                        <span>ул. Васильковая, 7А
-                                    Киев, 08132</span></a>
-                                </li>
-                                <li class="contacts__item">
-                                    <a href="tel:+380441111111" class="contacts__link link">
-                                        <svg class="contacts__icon">
-                                            <use href="./images/sprite.svg#icon-phone"></use>
-                                        </svg>
-                                        <span>+38 044 111 11 11</span></a>
-                                </li>
-                                <li class="contacts__item">
-                                    <a href="mailto:barbershop@email.com" class="contacts__link">
-                                        <svg class="contacts__icon">
-                                            <use href="./images/sprite.svg#icon-mail"></use>
-                                        </svg>
-                                        <span>barbershop@email.com</span></a>
-                                </li>
-                            </ul>
-                        </address>
+                        <div class="contacts__wrap">
+                            <address class="contacts__address">
+                                <ul class="contacts__list list">
+                                    <li class="contacts__item">
+                                        <a href="" class="contacts__link link">
+                                            <svg class="contacts__icon">
+                                                <use href="./images/sprite.svg#icon-map-pin"></use>
+                                            </svg>
+                                            <span>ул. Васильковая, 7А
+                                        Киев, 08132</span></a>
+                                    </li>
+                                    <li class="contacts__item">
+                                        <a href="tel:+380441111111" class="contacts__link link">
+                                            <svg class="contacts__icon">
+                                                <use href="./images/sprite.svg#icon-phone"></use>
+                                            </svg>
+                                            <span>+38 044 111 11 11</span></a>
+                                    </li>
+                                    <li class="contacts__item">
+                                        <a href="mailto:barbershop@email.com" class="contacts__link">
+                                            <svg class="contacts__icon">
+                                                <use href="./images/sprite.svg#icon-mail"></use>
+                                            </svg>
+                                            <span>barbershop@email.com</span></a>
+                                    </li>
+                                </ul>
+                            </address>
 
-                        <p class="contacts__time-tittle section__pretittle">время работы</p>
-                        <p class="contacts__time-text">Ежедневно с 9:00 до 22:00</p>
+                            <div class="contacts__time-wrap">
+                                <p class="contacts__time-tittle section__pretittle">время работы</p>
+                                <p class="contacts__time-text">Ежедневно с 9:00 до 22:00</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>

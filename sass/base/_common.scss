@@ -65,6 +65,9 @@ body {
     @include font(28px, (33 / 28), 700, 0.05em);
     font-family: $tittle-font-family;
     margin-bottom: 20px;
+    @media screen and (min-width: $tablet) {
+      @include font(42px, (49 / 42), 700, 0.05em);
+    }
   }
 
   &__after-tittle {

@@ -18,7 +18,7 @@
 
   @media screen and (min-width: $tablet) and (max-width: ($desktop - 1px)) {
     width: 576px;
-
+    padding: 280px 167px 237px 70px;
     background-image: url(../images/hero-tablet.jpg);
 
     @media screen and (min-device-pixel-ratio: 2),
@@ -44,9 +44,47 @@
   }
 }
 
-.hero__list {
+.hero {
+  display: flex;
+}
+
+.hero__left {
   @media screen and (max-width: ($tablet - 1px)) {
     display: none;
+  }
+  display: flex;
+  align-items: flex-end;
+  width: 85px;
+  margin-right: 28px;
+  padding: 0 35px 40px 35px;
+}
+
+.hero__list {
+  display: flex;
+  transform: rotate(-90deg);
+  transform-origin: top left;
+  align-items: center;
+  &::before {
+    content: '';
+    width: 60px;
+    height: 1px;
+
+    margin-right: 20px;
+    background-color: $primary-black-color;
+  }
+}
+
+.hero__item--margin {
+  margin-right: 40px;
+}
+
+.hero__social {
+  @include font(11px, (15 / 11), 600, 0.2em);
+  color: $primary-black-color;
+  transition: color $transition-duration $timing-function;
+  &:hover,
+  &:focus {
+    color: $accent-color;
   }
 }
 

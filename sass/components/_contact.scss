@@ -1,6 +1,7 @@
 .contact {
   background-color: $contact-bg;
   padding-bottom: 0;
+
   & .container {
     padding: 0;
   }
@@ -9,12 +10,26 @@
 .form {
   padding: 0 31px 84px 31px;
   text-align: center;
+
+  @media screen and (min-width: $tablet) {
+    padding: 0 39px 100px 39px;
+    text-align: left;
+  }
+
   &__heading {
     @include font(42px, (49 / 42), 700, 00.05em);
     color: $primary-white-color;
-    text-align: center;
     margin-bottom: 44px;
     font-family: $tittle-font-family;
+  }
+
+  &__input-wrap {
+    @media screen and (min-width: $tablet) {
+      display: flex;
+      & .form__label {
+        width: 330px;
+      }
+    }
   }
 
   &__label {
@@ -23,6 +38,11 @@
     flex-direction: column;
     width: 100%;
     margin-bottom: 44px;
+    @media screen and (min-width: $tablet) {
+      &--margin {
+        margin-right: 30px;
+      }
+    }
   }
 
   &__placeholder {
@@ -87,7 +107,7 @@
 
   @media screen and (min-width: $tablet) and (max-width: ($desktop - 1px)) {
     background-image: url(../images/contacts-tablet.png);
-
+    padding: 100px 39px 100px 39px;
     @media screen and (min-device-pixel-ratio: 2),
       screen and (min-resolution: 192dpi),
       screen and (min-resolution: 2dppx) {
@@ -113,8 +133,18 @@
     margin-bottom: 40px;
   }
 
+  &__wrap {
+    @media screen and (min-width: $tablet) and (max-width: ($desktop - 1px)) {
+      display: flex;
+    }
+  }
+
   &__address {
     margin-bottom: 44px;
+    @media screen and (min-width: $tablet) and (max-width: ($desktop - 1px)) {
+      width: 330px;
+      margin-bottom: 0;
+    }
   }
 
   &__item {
@@ -122,6 +152,7 @@
       margin-bottom: 20px;
     }
   }
+
   &__icon {
     width: 24px;
     height: 24px;
@@ -140,10 +171,13 @@
 
     display: flex;
   }
+  &__time-wrap {
+    margin-left: 30px;
+  }
 
   &__time-tittle {
     &::before {
-      background-color: $primary-white-color;
+      background-color: $pre-tittle-color;
     }
     color: $primary-white-color;
   }
