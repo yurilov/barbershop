@@ -1,73 +1,104 @@
-.advantages__pretittle {
-  color: $primary-black-color;
-
-  &::before {
-    background-color: $primary-black-color;
-  }
-}
-
-.advantages__tittle {
-  color: $primary-black-color;
-}
-
-.advantages__after-tittle {
-  @include font(18px, (30 / 18));
-  margin-bottom: 44px;
-}
-
-.advantages__list {
-  display: flex;
-  flex-wrap: wrap;
-
-  @media screen and (min-width: $tablet) and (max-width: ($desktop - 1px)) {
-    padding-left: 240px;
-  }
-}
-
-.advantages__item {
-  background-color: $third-bg-color;
-  padding: 20px 36px;
-  width: 193px;
-  height: 133px;
-
-  @media screen and (min-width: $tablet) {
-    padding: 20px 44px;
-    width: 210px;
-  }
-
-  text-align: center;
-
-  &--padding {
-    padding: 20px 32px;
-    @media screen and (min-width: $tablet) {
-      padding: 20px 40px;
+.advantages {
+  & .container {
+    @media screen and (min-width: $desktop) {
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: space-between;
+      padding-left: 155px;
+      padding-right: 125px;
     }
   }
 
-  &:nth-child(odd) {
-    margin-right: 30px;
+  &__wrap {
+    margin-left: 130px;
   }
 
-  &:nth-child(even) {
-    margin-top: 30px;
+  &__pretittle {
+    color: $primary-black-color;
+
+    &::before {
+      background-color: $primary-black-color;
+    }
   }
-}
 
-.advantages__number {
-  @include font(42px, (57/42), 700, 0.05em);
-  color: $primary-black-color;
-  display: flex;
-  justify-content: center;
-
-  &::after {
-    content: '+';
-    @include font(16px, (22/16), 600);
-    color: $accent-color;
+  &__tittle {
+    color: $primary-black-color;
   }
-}
 
-.advantages__text {
-  @include font(11px, (15/11), 600, 0em);
-  text-align: center;
-  color: $primary-black-color;
+  &__after-tittle {
+    @include font(18px, (30 / 18));
+    margin-bottom: 44px;
+
+    @media screen and (min-width: $desktop) {
+      margin-bottom: 0;
+      // width: 500px;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+
+    @media screen and (min-width: $tablet) and (max-width: ($desktop - 1px)) {
+      padding-left: 240px;
+    }
+  }
+
+  &__item {
+    background-color: $third-bg-color;
+    padding: 20px 36px;
+    width: 193px;
+    height: 133px;
+
+    @media screen and (min-width: $tablet) {
+      padding: 20px 44px;
+      width: 210px;
+    }
+
+    @media screen and (min-width: $desktop) {
+      padding: 20px 24px;
+      width: 170px;
+    }
+
+    text-align: center;
+
+    &--padding {
+      padding: 20px 32px;
+
+      @media screen and (min-width: $tablet) {
+        padding: 20px 40px;
+      }
+
+      @media screen and (min-width: $desktop) {
+        padding: 20px 20px;
+      }
+    }
+
+    &:nth-child(odd) {
+      margin-right: 30px;
+    }
+
+    &:nth-child(even) {
+      margin-top: 30px;
+    }
+  }
+
+  &__number {
+    @include font(42px, (57/42), 700, 0.05em);
+    color: $primary-black-color;
+    display: flex;
+    justify-content: center;
+
+    &::after {
+      content: '+';
+      @include font(16px, (22/16), 600);
+      color: $accent-color;
+    }
+  }
+
+  &__text {
+    @include font(11px, (15/11), 600, 0em);
+    text-align: center;
+    color: $primary-black-color;
+  }
 }

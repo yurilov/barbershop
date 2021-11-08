@@ -17,8 +17,8 @@
     <body>
         <header class="header">
             <div class="container">
-                <a href="./index.html" class="link">
-                    <svg width="66" height="55" class="logo">
+                <a href="./index.html" class="link logo">
+                    <svg width="66" height="55" class="logo__icon">
                         <use href="./images/sprite.svg#icon-logo"></use>
                     </svg>
                 </a>
@@ -132,9 +132,11 @@
             <section class="section advantages">
                 <div class="container">
                     
-                    <p class="section__pretittle advantages__pretittle">старая традиционная школа</p>
-                    <h2 class="section__tittle advantages__tittle">Почему приходят именно к нам?</h2>
-                    <p class="section__after-tittle advantages__after-tittle">О нас говорят только хорошее. Но лучше 1 раз увидеть и прочувствовать, чем 10 раз прочитать.</p>
+                    <div class="advantages__wrap">
+                        <p class="section__pretittle advantages__pretittle">старая традиционная школа</p>
+                        <h2 class="section__tittle advantages__tittle">Почему приходят именно к нам?</h2>
+                        <p class="section__after-tittle advantages__after-tittle">О нас говорят только хорошее. Но лучше 1 раз увидеть и прочувствовать, чем 10 раз прочитать.</p>
+                    </div>
                     <ul class="advantages__list list">
                         <li class="advantages__item">
                             <span class="advantages__number">600</span>
@@ -353,7 +355,7 @@
                 </div>
             </section>
 
-            <section id="contacts" class="section contact">
+            <section class="section contact">
                 <div class="container">
                     <div class="form-box">
                         <form class="form" id="form">
@@ -379,7 +381,7 @@
                             <button type="submit" class="btn form__btn">отправить</button>
                         </form>
                     </div>
-                    <div class="contacts">
+                    <div id="contacts" class="contacts">
                         <h2 class="contacts__heading">Контакты</h2>
                         <div class="contacts__wrap">
                             <address class="contacts__address">

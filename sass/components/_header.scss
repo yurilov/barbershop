@@ -10,14 +10,28 @@
   & .container {
     display: flex;
     align-items: flex-start;
-    justify-content: space-between;
     padding-left: 49px;
     padding-right: 40px;
     margin: 0 auto;
+
+    @media screen and (max-width: ($tablet - 1px)) {
+      justify-content: space-between;
+    }
+
+    @media screen and (min-width: $desktop) {
+      padding-left: 53px;
+      padding-right: 63px;
+      align-items: baseline;
+    }
+  }
+}
+.logo {
+  @media screen and (min-width: $desktop) {
+    align-self: center;
   }
 }
 
-.logo {
+.logo__icon {
   fill: $primary-black-color;
 
   @media screen and (max-width: ($tablet - 1px)) {
@@ -29,9 +43,14 @@
   @media screen and (max-width: ($tablet - 1px)) {
     display: none;
   }
+
   @media screen and (min-width: $tablet) {
     margin-left: 61px;
     padding-top: 20px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    margin-left: 53px;
   }
 
   &__list {
@@ -67,6 +86,10 @@
     align-items: center;
     margin-left: 47px;
   }
+
+  @media screen and (min-width: $desktop) {
+    margin-left: auto;
+  }
 }
 
 .header__link {
@@ -84,6 +107,7 @@
 .menu-open {
   border: none;
   background-color: transparent;
+
   &__icon {
     fill: $primary-white-color;
   }

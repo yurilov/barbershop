@@ -47,6 +47,10 @@
 
   &__tittle {
     color: $primary-white-color;
+
+    @media screen and (min-width: $desktop) {
+      margin-bottom: 44px;
+    }
   }
 
   &__wrap {
@@ -56,6 +60,12 @@
       rgba(23, 26, 36, 0.2) 100%
     );
     padding: 30px;
+
+    @media screen and (min-width: $desktop) {
+      display: flex;
+      background-image: none;
+      padding: 0;
+    }
   }
 
   &__list {
@@ -65,18 +75,53 @@
       @include font(18px, (30 / 18));
     }
 
+    @media screen and (min-width: $desktop) {
+      width: 585px;
+      padding: 30px 40px;
+    }
+
+    @media screen and (max-width: ($desktop - 1px)) {
+      margin-top: -20px;
+    }
+
     color: $after-tittle-color;
-    margin-top: -20px;
+
+    &--left {
+      @media screen and (min-width: $desktop) {
+        background-image: linear-gradient(
+          180deg,
+          #171a24 0%,
+          rgba(23, 26, 36, 0.2) 100%
+        );
+      }
+    }
 
     &--right {
       @media screen and (max-width: ($desktop - 1px)) {
         margin-top: 20px;
       }
+
+      @media screen and (min-width: $desktop) {
+        background: linear-gradient(
+          180deg,
+          #090b13 0%,
+          rgba(9, 11, 19, 0.2) 100%
+        );
+      }
     }
   }
 
   &__item {
-    margin-top: 20px;
+    @media screen and (max-width: ($desktop - 1px)) {
+      margin-top: -20px;
+    }
+
+    @media screen and (min-width: $desktop) {
+      &:not(:last-child) {
+        margin-bottom: 20px;
+      }
+    }
+
     display: flex;
     justify-content: space-between;
 

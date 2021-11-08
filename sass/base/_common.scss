@@ -72,6 +72,9 @@ body {
 
   &__after-tittle {
     @include font(16px, (26 / 16));
+    @media screen and (min-width: $desktop) {
+      @include font(18px, (30 / 18));
+    }
   }
 }
 

@@ -31,8 +31,7 @@
   @media screen and (min-width: $desktop) {
     width: 1073px;
     height: 680px;
-    padding-top: 272px;
-    padding-bottom: 208px;
+    padding: 272px 452px 206px 96px;
 
     background-image: url(../images/hero-desktop.jpg);
 
@@ -46,17 +45,28 @@
 
 .hero {
   display: flex;
+
+  &.container {
+    @media screen and (min-width: $desktop) {
+      padding-left: 0;
+    }
+  }
 }
 
 .hero__left {
   @media screen and (max-width: ($tablet - 1px)) {
     display: none;
   }
+
   display: flex;
   align-items: flex-end;
   width: 85px;
   margin-right: 28px;
   padding: 0 35px 40px 35px;
+
+  @media screen and (min-width: $desktop) {
+    padding: 0 56px 40px 78px;
+  }
 }
 
 .hero__list {
@@ -101,8 +111,16 @@
   @include font(48px, (56 / 48), 700, 0.05em);
   color: $primary-white-color;
   margin-bottom: 20px;
+
+  @media screen and (min-width: $desktop) {
+    @include font(72px, (85 / 72), 700, 0.05em);
+  }
 }
 
 .hero__after-tittle {
   color: $after-tittle-color;
+
+  @media screen and (min-width: $desktop) {
+    width: 400px;
+  }
 }

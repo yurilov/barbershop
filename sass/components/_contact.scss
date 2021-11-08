@@ -2,11 +2,21 @@
   background-color: $contact-bg;
   padding-bottom: 0;
 
+  @media screen and (min-width: $desktop) {
+    padding-top: 0;
+  }
+
   & .container {
     padding: 0;
+
+    @media screen and (min-width: $desktop) {
+      display: flex;
+    }
   }
 }
-
+.form-box {
+  width: 655px;
+}
 .form {
   padding: 0 31px 84px 31px;
   text-align: center;
@@ -14,6 +24,10 @@
   @media screen and (min-width: $tablet) {
     padding: 0 39px 100px 39px;
     text-align: left;
+  }
+
+  @media screen and (min-width: $desktop) {
+    padding: 130px 40px 193px 55px;
   }
 
   &__heading {
@@ -117,11 +131,13 @@
 
   @media screen and (min-width: $desktop) {
     background-image: url(../images/contacts-desktop.png);
+    padding: 130px 105px 100px 100px;
+    width: 625px;
 
     @media screen and (min-device-pixel-ratio: 2),
       screen and (min-resolution: 192dpi),
       screen and (min-resolution: 2dppx) {
-      background-image: url(../images/hero-desktop@2x.png);
+      background-image: url(../images/contacts-desktop@2x.png);
     }
   }
 
