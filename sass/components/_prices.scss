@@ -112,10 +112,6 @@
   }
 
   &__item {
-    @media screen and (max-width: ($desktop - 1px)) {
-      margin-top: -20px;
-    }
-
     @media screen and (min-width: $desktop) {
       &:not(:last-child) {
         margin-bottom: 20px;

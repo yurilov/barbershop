@@ -14,9 +14,11 @@
     }
   }
 }
-.form-box {
-  width: 655px;
-}
+
+// .form-box {
+//   width: 655px;
+// }
+
 .form {
   padding: 0 31px 84px 31px;
   text-align: center;
@@ -95,6 +97,7 @@
     outline: none;
     transition: border-color $transition-duration $timing-function;
     color: $primary-white-color;
+    resize: none;
     &:focus-visible {
       border-color: $primary-white-color;
     }

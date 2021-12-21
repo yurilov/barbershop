@@ -318,7 +318,7 @@ body {
     background-image: url(../images/hero-mobile@2x.jpg);
   }
 }
-@media screen and (max-width: 767px) {
+@media screen and (min-width: 480px) and (max-width: 767px) {
   .hero__wrapper {
     width: 480px;
   }
@@ -643,11 +643,6 @@ body {
       -ms-flex-align: baseline;
           align-items: baseline;
 }
-@media screen and (max-width: 1279px) {
-  .prices__item {
-    margin-top: -20px;
-  }
-}
 @media screen and (min-width: 1280px) {
   .prices__item:not(:last-child) {
     margin-bottom: 20px;
@@ -961,10 +956,6 @@ body {
   }
 }
 
-.form-box {
-  width: 655px;
-}
-
 .form {
   padding: 0 31px 84px 31px;
   text-align: center;
@@ -1056,6 +1047,7 @@ body {
   -webkit-transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   color: #ffffff;
+  resize: none;
 }
 .form__textarea:focus-visible {
   border-color: #ffffff;

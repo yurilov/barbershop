@@ -17,9 +17,8 @@
 
   openMenuBtn.addEventListener('click', toggleMenu);
   closeMenuBtn.addEventListener('click', toggleMenu);
+  menuNavLink.addEventListener('click', toggleMenu);
 
-  // Закрываем мобильное меню на более широких экранах
-  // в случае изменения ориентации устройства.
   window.matchMedia('(min-width: 768px)').addEventListener('change', e => {
     if (!e.matches) return;
     mobileMenu.classList.remove('is-open');
@@ -27,3 +26,15 @@
     bodyScrollLock.enableBodyScroll(document.body);
   });
 })();
+
+// jQuery(document).on('click', '.menu-nav__link', function () {
+//   jQuery('.menu-nav__link')
+//     .closest('.js-menu-container')
+//     .removeClass('is-open');
+// });
+
+// jQuery(document).on('click', '.menu-contact__btn', function () {
+//   jQuery('.menu-contact__btn')
+//     .closest('.js-menu-container')
+//     .removeClass('is-open');
+// });
